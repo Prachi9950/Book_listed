@@ -19,7 +19,7 @@ function displayBooks() {
       row.innerHTML = `
         <td>${book.title}</td>
         <td>${book.author}</td>
-        <td>${book.bno}</td>
+        <td>${book.bookNo}</td>
         <td>${book.date}</td>
         <td><a href="#" class="delete">X</a></td>
       `;
@@ -30,8 +30,8 @@ function displayBooks() {
 
 bookList.addEventListener("click", (e) => {
   if (e.target.classList.contains("delete")) {
-    const isbn = e.target.parentElement.previousElementSibling.previousElementSibling.textContent;
-    let books = getBooks().filter((b) => b.isbn !== isbn);
+    const bookNo = e.target.parentElement.previousElementSibling.previousElementSibling.textContent;
+    let books = getBooks().filter((b) => b.bookNo !== bookNo);
     localStorage.setItem("books", JSON.stringify(books));
     e.target.parentElement.parentElement.remove();
     showAlert("Book Removed!", "success");
@@ -45,4 +45,3 @@ function showAlert(message, type) {
 }
 
 document.addEventListener("DOMContentLoaded", displayBooks);
-
