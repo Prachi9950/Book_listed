@@ -5,8 +5,8 @@ class Book {
   constructor(title, author, isbn, dateAdded) {
     this.title = title;
     this.author = author;
-    this.isbn = isbn;
-    this.dateAdded = dateAdded;
+    this.bno = bno;
+    this.date = date;
   }
 }
 
@@ -35,7 +35,7 @@ form.addEventListener("submit", (e) => {
 
   const title = document.getElementById("title").value.trim();
   const author = document.getElementById("author").value.trim();
-  const isbn = document.getElementById("isbn").value.trim();
+  const bno = document.getElementById("bno").value.trim();
 
   if (title === "" || author === "" || isbn === "") {
     showAlert("Please fill all fields!", "error");
@@ -46,10 +46,11 @@ form.addEventListener("submit", (e) => {
       month: "short",
       year: "numeric",
     });
-    const book = new Book(title, author, isbn, formattedDate);
+    const book = new Book(title, author, bno, formattedDate);
 
     Store.addBook(book);
     showAlert("New Book Added!", "success");
     form.reset();
   }
 });
+
