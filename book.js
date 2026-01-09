@@ -30,7 +30,10 @@ function displayBooks() {
 
 bookList.addEventListener("click", (e) => {
   if (e.target.classList.contains("delete")) {
-    const bookNo = e.target.parentElement.previousElementSibling.previousElementSibling.textContent;
+    const bookNo =
+      e.target.parentElement.previousElementSibling.previousElementSibling
+        .textContent;
+
     let books = getBooks().filter((b) => b.bookNo !== bookNo);
     localStorage.setItem("books", JSON.stringify(books));
     e.target.parentElement.parentElement.remove();
