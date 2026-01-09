@@ -1,0 +1,135 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #dff6ff, #a7c7e7);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.container {
+  background: #ffffffcc;
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  padding: 40px 50px;
+  width: 90%;
+  max-width: 700px;
+}
+
+h3 {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #0a3d62;
+  font-weight: 600;
+}
+
+form div {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+input[type="text"] {
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1px solid #a7c7e7;
+  outline: none;
+  transition: 0.3s ease;
+}
+
+#submit-btn,
+#view-books-btn,
+#back-btn {
+  background: linear-gradient(90deg, #0096c7, #00b4d8);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 14px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  width: 100%;
+  transition: 0.3s ease;
+  margin-top: 10px;
+}
+
+#submit-btn:hover,
+#view-books-btn:hover,
+#back-btn:hover {
+  background: linear-gradient(90deg, #0077b6, #0096c7);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  background: #f8fbff;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+th,
+td {
+  padding: 12px 15px;
+  text-align: center;
+  word-wrap: break-word;
+  white-space: normal;
+}
+
+th {
+  background: #0096c7;
+  color: white;
+  text-transform: uppercase;
+}
+
+tr:nth-child(even) {
+  background: #e3f2fd;
+}
+
+.delete {
+  color: #e63946;
+  font-weight: bold;
+  font-size: 1.2rem;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.delete:hover {
+  color: #c1121f;
+}
+
+.alert {
+  display: none;
+  text-align: center;
+  padding: 10px;
+  border-radius: 8px;
+  color: #fff;
+  margin-bottom: 15px;
+  font-weight: 500;
+}
+
+.alert.success {
+  display: block;
+  background: #4caf50;
+}
+
+.alert.error {
+  display: block;
+  background: #e63946;
+}
+
+@media (max-width: 600px) {
+  table {
+    font-size: 0.9rem;
+  }
+  th, td {
+    padding: 8px;
+  }
+}
