@@ -19,8 +19,8 @@ function displayBooks() {
       row.innerHTML = `
         <td>${book.title}</td>
         <td>${book.author}</td>
-        <td>${book.isbn}</td>
-        <td>${book.dateAdded}</td>
+        <td>${book.bno}</td>
+        <td>${book.date}</td>
         <td><a href="#" class="delete">X</a></td>
       `;
       bookList.appendChild(row);
@@ -45,3 +45,4 @@ function showAlert(message, type) {
 }
 
 document.addEventListener("DOMContentLoaded", displayBooks);
+
